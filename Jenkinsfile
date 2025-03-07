@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker build -t KamalReddyy/paymentservice:latest ."
+                        sh "docker build -t kamalreddyy/paymentservice:latest ."
                     }
                 }
             }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push KamalReddyy/paymentservice:latest "
+                        sh "docker push kamalreddyy/paymentservice:latest "
                     }
                 }
             }
